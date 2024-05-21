@@ -1,0 +1,78 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": ["mergeConfidence:all-badges"],
+
+  "enabled": true,
+
+  "assignees": [
+    "mimmi20"
+  ],
+  "automerge": false,
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
+  "commitBodyTable": true,
+  "configMigration": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardApproval": true,
+  "enabledManagers": ["composer", "github-actions", "npm"],
+  "ignoreTests": false,
+  "ignoreUnstable": true,
+  "internalChecksFilter": "strict",
+  "labels": [
+    "dependencies"
+  ],
+  "lockFileMaintenance": {
+    "enabled": false
+  },
+  "platformAutomerge": false,
+  "prBodyColumns": [
+    "Package",
+    "Change",
+    "Type",
+    "Update"
+  ],
+  "prBodyDefinitions": {
+    "Package": "`{{{depName}}}`",
+    "Type": "{{{depType}}}",
+    "Update": "{{{updateType}}}",
+    "Change": "[{{#if displayFrom}}`{{{displayFrom}}}` -> {{else}}{{#if currentValue}}`{{{currentValue}}}` -> {{/if}}{{/if}}{{#if displayTo}}`{{{displayTo}}}`{{else}}`{{{newValue}}}`{{/if}}]({{#if depName}}https://renovatebot.com/diffs/npm/{{replace '/' '%2f' depName}}/{{{currentVersion}}}/{{{newVersion}}}{{/if}})"
+  },
+  "prCreation": "immediate",
+  "prHourlyLimit": 0,
+  "rangeStrategy": "bump",
+  "rebaseWhen": "behind-base-branch",
+  "reviewers": [
+    "mimmi20"
+  ],
+  "rollbackPrs": true,
+  "schedule": ["before 3am"],
+  "semanticCommits": "disabled",
+  "separateMajorMinor": true,
+  "separateMinorPatch": false,
+  "timezone": "Europe/Berlin",
+  "updateLockFiles": false,
+  "updateNotScheduled": false,
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch-dependencies",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "groupName": "PHP",
+      "matchDepNames": ["php"],
+      "allowedVersions": "^8.1",
+      "ignoreUnstable": false,
+      "rangeStrategy": "widen"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}
