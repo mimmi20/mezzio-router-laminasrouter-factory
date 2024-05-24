@@ -39,7 +39,7 @@
     </source>
 
     <testsuites>
-        <testsuite name="Template Test Suite">
+        <testsuite name="mezzio-router-laminasrouter-factory">
             <directory>tests/</directory>
         </testsuite>
     </testsuites>

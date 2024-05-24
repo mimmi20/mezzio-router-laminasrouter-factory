@@ -10,7 +10,10 @@ updates:
     directory: "/"
 
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "thursday"
+      time: "07:00"
+      timezone: "Europe/Berlin"
 
     groups:
       # Specify a name for the group, which will be used in pull request titles
@@ -49,16 +52,19 @@ updates:
       - dependency-name: "nikic/php-parser"
         versions:
           - ">= 0"
-    #   - dependency-name: phpunit/phpunit
-    #     versions:
-    #       - ">= 0"
+#      - dependency-name: phpunit/phpunit
+#        versions:
+#          - ">= 0"
 
   - package-ecosystem: "github-actions"
 
     directory: "/"
 
     schedule:
-      interval: "daily"
+      interval: "weekly"
+      day: "thursday"
+      time: "07:00"
+      timezone: "Europe/Berlin"
 
     groups:
       # Specify a name for the group, which will be used in pull request titles
