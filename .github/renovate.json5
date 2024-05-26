@@ -16,11 +16,11 @@
   "configWarningReuseIssue": false,
   "dependencyDashboard": false,
   "dependencyDashboardApproval": false,
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
   // "enabledManagers": ["composer", "github-actions", "npm"],
   "ignoreTests": false,
   "ignoreUnstable": true,
   "internalChecksFilter": "strict",
-  "dependencyDashboardOSVVulnerabilitySummary": "all",
   "labels": [
     "dependencies"
   ],
@@ -49,6 +49,7 @@
   "reviewers": [
     "mimmi20"
   ],
+  "rollbackPrs": true,
   "schedule": ["at 4:00 am on Thursday"],
   "semanticCommits": "disabled",
   "separateMajorMinor": true,
