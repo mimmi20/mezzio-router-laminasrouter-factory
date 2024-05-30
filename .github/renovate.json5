@@ -3,7 +3,7 @@
 
   "extends": ["mergeConfidence:all-badges"],
 
-  "enabled": false,
+  "enabled": true,
 
   "assignees": [
     "mimmi20"
