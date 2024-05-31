@@ -70,5 +70,10 @@
     "lock": false,
     "preferred-install": "dist",
     "sort-packages": true
+  },
+  "extra": {
+    "laminas": {
+      "config-provider": "Mimmi20\\Mezzio\\Router\\ConfigProvider"
+    }
   }
 }
