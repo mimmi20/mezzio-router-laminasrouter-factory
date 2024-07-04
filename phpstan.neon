@@ -118,6 +118,7 @@ parameters:
 
   ignoreErrors:
     - '~will always evaluate to true~'
+    - '~deprecated interface Laminas\\I18n\\Translator\\TranslatorInterface~'
 
 rules:
   # code complexity
