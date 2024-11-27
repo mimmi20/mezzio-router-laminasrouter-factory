@@ -15,6 +15,7 @@ namespace Mimmi20Test\Mezzio\Router;
 use Mezzio\Router\LaminasRouter;
 use Mezzio\Router\RouterInterface;
 use Mimmi20\Mezzio\Router\ConfigProvider;
+use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 
@@ -23,6 +24,7 @@ final class ConfigProviderTest extends TestCase
     private ConfigProvider $provider;
 
     /** @throws void */
+    #[Override]
     protected function setUp(): void
     {
         $this->provider = new ConfigProvider();
