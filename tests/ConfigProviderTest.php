@@ -16,25 +16,15 @@ namespace Mimmi20Test\Mezzio\Router;
 use Mezzio\Router\LaminasRouter;
 use Mezzio\Router\RouterInterface;
 use Mimmi20\Mezzio\Router\ConfigProvider;
-use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 
 final class ConfigProviderTest extends TestCase
 {
-    private ConfigProvider $provider;
-
-    /** @throws void */
-    #[Override]
-    protected function setUp(): void
-    {
-        $this->provider = new ConfigProvider();
-    }
-
     /** @throws Exception */
     public function testProviderDefinesExpectedFactoryServices(): void
     {
-        $dependencies = $this->provider->getDependencyConfig();
+        $dependencies = (new ConfigProvider())->getDependencyConfig();
         self::assertArrayHasKey('factories', $dependencies);
 
         $factories = $dependencies['factories'];
@@ -51,7 +41,7 @@ final class ConfigProviderTest extends TestCase
     /** @throws Exception */
     public function testInvocationReturnsArrayWithDependencies(): void
     {
-        $config = ($this->provider)();
+        $config = (new ConfigProvider())();
 
         self::assertArrayHasKey('dependencies', $config);
 
