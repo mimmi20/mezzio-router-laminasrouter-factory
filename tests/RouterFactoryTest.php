@@ -19,6 +19,7 @@ use Laminas\I18n\Translator\TranslatorInterface;
 use Laminas\Router\Http\TranslatorAwareTreeRouteStack;
 use Mezzio\Router\LaminasRouter;
 use Mimmi20\Mezzio\Router\RouterFactory;
+use PHPUnit\Event\NoPreviousThrowableException;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerExceptionInterface;
@@ -34,6 +35,8 @@ final class RouterFactoryTest extends TestCase
      * @throws Exception
      * @throws ContainerExceptionInterface
      * @throws ReflectionException
+     * @throws NoPreviousThrowableException
+     * @throws \PHPUnit\Framework\MockObject\Exception
      */
     public function testInvoke(): void
     {
