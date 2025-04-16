@@ -21,7 +21,7 @@
   },
   "require": {
     "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
-    "laminas/laminas-i18n": "^2.29.0",
+    "laminas/laminas-i18n": "^2.30.0",
     "laminas/laminas-router": "^3.14.0",
     "laminas/laminas-translator": "^1.1.0",
     "mezzio/mezzio-laminasrouter": "^3.10.0",
