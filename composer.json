@@ -1,6 +1,6 @@
 {
   "name": "mimmi20/mezzio-router-laminasrouter-factory",
-  "description": "Provides a Middleware to set set the Locale",
+  "description": "Provides a Factory to set a TranslatorAwareTreeRouteStack for a laminas-router in a Mezzio Application",
   "license": "MIT",
   "type": "library",
   "authors": [
