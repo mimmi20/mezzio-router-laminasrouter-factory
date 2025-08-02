@@ -15,7 +15,7 @@
 
 This component provides a Factory to set a TranslatorAwareTreeRouteStack for a laminas-router in a Mezzio Application.
 
-The Tranlation Domain `routing` is used.
+The Translation Domain `routing` is used.
 
 ## Requirements
 
