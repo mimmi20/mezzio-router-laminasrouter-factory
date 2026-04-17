@@ -110,6 +110,14 @@ parameters:
   ignoreErrors:
     - '~deprecated interface Laminas\\I18n\\Translator\\TranslatorInterface~'
 
+services:
+  errorFormatter.sarif:
+    class: PHPStanSarifErrorFormatter\SarifErrorFormatter
+    arguments:
+      relativePathHelper: @simpleRelativePathHelper
+      currentWorkingDirectory: %currentWorkingDirectory%
+      pretty: true
+
 rules:
   # code complexity
   - Symplify\PHPStanRules\Rules\NoDynamicNameRule
