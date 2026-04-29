@@ -119,6 +119,8 @@ updates:
 
     ignore:
       - dependency-name: "psr/container"
+      - dependency-name: "mezzio/mezzio-router"
+        versions: [ ">=4.0.0" ]
 
     # Disable rebasing for all pull requests
     rebase-strategy: "disabled"
