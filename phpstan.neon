@@ -109,6 +109,11 @@ parameters:
 
   ignoreErrors:
     - '~deprecated interface Laminas\\I18n\\Translator\\TranslatorInterface~'
+    - '~will always evaluate to true~'
+    -
+      identifier: method.deprecated
+      paths:
+        - src/RouterFactory.php
 
 services:
   errorFormatter.sarif:
