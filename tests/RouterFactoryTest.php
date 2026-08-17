@@ -38,7 +38,7 @@ final class RouterFactoryTest extends TestCase
      */
     public function testInvoke(): void
     {
-        $translator = $this->createStub(Translator::class);
+        $translator = self::createStub(Translator::class);
 
         $container = $this->getMockBuilder(ContainerInterface::class)
             ->disableOriginalConstructor()
